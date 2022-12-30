@@ -19,6 +19,8 @@ def users_avatars_path(instance, filename):
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ["username"]
+
     username_validator = ASCIIUsernameValidator()
 
     username = models.CharField(
