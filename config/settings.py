@@ -86,6 +86,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'TEST': {
+            'NAME': BASE_DIR / 'test_db.sqlite3',
+        },
     }
 }
 
@@ -197,4 +200,8 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 # Email as files for debug
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = "var/email-messages/"
+
+LOCALE_PATHS = [BASE_DIR / "locale"]
+
+SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "geckodriver"
 
