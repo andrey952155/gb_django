@@ -1,0 +1,7 @@
+Django
+Pillow
+django-redis
+django-debug-toolbar
+"celery[redis]"
+pytest-django
+selenium

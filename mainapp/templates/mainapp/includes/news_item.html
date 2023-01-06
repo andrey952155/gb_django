@@ -2,10 +2,10 @@
 
 <div class="card my-2">
                 <div class="card-body">
-                    <h5 class="card-title">{{ i.news_title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ datetime|date:"d.m.Y m-h-s" }}</h6>
-                    <p class="card-text">{{ i.news_preview }}</p>
-                    <a href="#" class="card-link">Подробнее</a>
+                    <h5 class="card-title">{{ i.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ i.created|date:"d.m.Y m-h-s" }}</h6>
+                    <p class="card-text">{{ i.preambule}}</p>
+                    <a href="{% url 'mainapp:news_detail' pk=i.pk %}" class="card-link">Подробнее</a>
                 </div>
             </div>
 
